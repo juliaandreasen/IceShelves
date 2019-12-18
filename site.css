@@ -1,0 +1,410 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	background-color:#F6F6F6;
+}
+
+.container {
+	width: 1000px;
+	/*height: 1450px;*/
+	background-color: #FFFFFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+
+	-webkit-box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 10px -8px rgba(0,0,0,0.75);
+}
+/* Style the header */
+.header {
+	background-color: #FFFFFF;
+  margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+  -webkit-box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.75); /*creates a box shadow around image*/
+  -moz-box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 10px -8px rgba(0,0,0,0.75);
+  position: relative;
+  text-align: center;
+  color:white
+}
+
+.centered{
+  /*aligns text over image*/
+  font-size: 40px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:#24305E;
+}
+.topnav a.right {
+  float: right;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+
+.side {
+  flex: 50%;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+.maincontent {
+	clear: both;
+	float: left;
+	width: 470px;
+	font-size:14px;
+  padding: 15px;
+  color: #24305E;
+  background-color:white;
+  border-color: #24305E;
+  border-style: solid;
+    border-width: 1px;
+  border-radius: 6px 6px 6px 6px;
+	line-height: 18px;
+	padding-top: 4px;
+	padding-bottom:40px;
+}
+/* dropdown button for the interactive map*/
+.dropbtn {
+    text-decoration: none;
+    display: block;
+    background-color: #24305E;
+    padding: 3px 8px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    z-index:100;
+  }
+.dropbtn a {
+    color: white;
+    padding: 3px 8px;
+    text-decoration: none;
+    display: block;
+  }
+.dropdown {
+      position: relative;
+      display: inline-block;
+  }
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 122px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index:50;
+  }
+  /* Links inside the dropdown */
+  .dropdown-content a {
+      color: black;
+      padding: 10px 12px;
+      text-decoration: none;
+      display: block;
+  }
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+      background-color: #24305E;
+  }
+
+  .mapSelect {
+    position: relative;
+    display: inline-block;
+  }
+  .mapSelect:hover .mapSelectContent {
+    display: block;
+  }
+
+
+/* Main column, includes the gif and area change figures */
+.main {
+  flex: 50%;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+.mainside {
+	background-color: white;
+	padding: 15px;
+}
+/* .mainside {
+  	float: right;
+  	width: 427px;
+  	font-size: 14px;
+    color: white;
+  	background-color:#24305E;
+  	border-color: #24305E;
+  	border-style: solid;
+      border-width: 1px;
+  	border-radius: 6px 6px 6px 6px;
+  line-height: 0px;
+	padding-top: 2px;
+} */
+.mainside {
+		clear: both;
+  	float: left;
+  	width: 470px;
+  	font-size: 14px;
+		padding:15px;
+    color: white;
+  	background-color:#24305E;
+  	border-color: #24305E;
+  	border-style: solid;
+      border-width: 1px;
+  	border-radius: 6px 6px 6px 6px;
+  line-height: 18px;
+	padding-top: 2px;
+	padding-bottom:36px;
+}
+.mainTopGif{
+    text-align:center;
+}
+.mainTopGif img{
+    max-width:400px;
+  }
+#nrt_archive_bar {
+	background-color: rgba(3,57,109,0.6);
+	margin-left: 10px;
+	margin-right: 20px;
+	margin-bottom: 5px;
+	color: white;
+	border-width:0;
+	font-size: 12px;
+	height: 30px;
+}
+#blue_box {
+	position: absolute;
+	top: 145px;
+	left: 465px;
+	width: 40px;
+	height: 30px;
+	background-color: rgb(3,57,109);
+	z-index: 1;
+}
+.rectangle {
+  background: #24305E;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  line-height: 18px;
+  padding-top: 2px;
+  text-align: center;
+	background: #24305E;
+  color: #fff;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+
+/* Centre images when required */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Format figure captions */
+
+.footer {
+  background-color: #24305E;
+  color: white;
+  padding: 15px;
+	text-align: center;
+
+}
+
+.instructions img{
+  border: 0.5px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+  display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background: #24305E;
+  color: #fff;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.break {
+	width:1000px;
+	height: 60px;
+background-color: #F6F6F6;
+color: black;
+padding: 5px;
+text-align: center;
+}
+
+.textbox{
+	width:1000px;
+	height: 645px;
+background-color: #fff;
+color: black;
+padding: 5px;
+text-align: left;
+}
+
+.textbox2{
+  align-items: center;
+	width:600px;
+	height: 200px;
+background-color: #F6F6F6;
+color: black;
+padding: 10px;
+text-align: center;
+}
+
+.gallery {
+  display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 20px;
+   align-items: stretch;
+   justify-items: center;
+  }
+.gallery img {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 75%;
+}
+.instructions img{
+  border: 0.5px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+  display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.cropimg {
+
+position: absolute;
+
+clip: rect(0px,50px,100px,50px);
+}
+
+.topnav2 {
+  overflow:hidden;
+  background-color:#24305E;
+  align-content: center;
+}
+
+.topnav2 a {
+  float: left;
+  color: #f2f2f2;
+  text-align: justify;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.topnav2 a:hover {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.topnav2 a.active {
+  background-color: #ddd;
+  color: black;
+}
+
+img.resize {
+  max-width:75%;
+  max-height:75%;
+}
+
+img.resize2 {
+  max-width:25%;
+  max-height:25%;
+}
+
+#summary: hover {
+  -webkit-transform: scale(2,2);
+}
+
+table.tableizer-table { /*create overarching table properties*/
+  font-size: 12px;
+  border: 1px solid #CCC;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.tableizer-table td { /*specify style for table data cells*/
+  padding: 4px;
+  margin: 3px;
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+/*ensure that the table columns are wide enough to prevent text from stacking*/
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.tableizer-table th { /*specify style for table headers*/
+  background-color: #104E8B;
+  color: #FFF;
+  font-weight: bold;
+}
